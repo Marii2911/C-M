@@ -1,15 +1,167 @@
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body style="background-color: #fce4ec; text-align: center; padding: 50px; font-family: Arial;">
-    <h1>El rincón de CruzMarii</h1>
-    <p>Próximamente: El mejor espacio para el cuidado y belleza de tus manos.</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudio de Belleza | Muestra</title>
+  <style>
+    /* Importamos una tipografía elegante de Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Contenedor principal estilo celular */
+    .container {
+      max-width: 400px; /* Ancho ideal para celulares */
+      margin: 0 auto;
+      background-color: #ffffff;
+      min-height: 100vh;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      padding-bottom: 40px;
+    }
+
+    /* Encabezado */
+    .header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      background-color: #ffeef2;
+      border-radius: 0 0 30px 30px;
+    }
     
-    <a href="https://wa.me/50557872347?text=Hola,%20me%20gustaría%20agendar%20una%20cita" target="_blank">
-      <button style="background-color: #d81b60; color: white; padding: 15px 30px; border: none; border-radius: 25px; font-size: 16px; cursor: pointer;">
-        Reserva tu cita por WhatsApp
-      </button>
-    </a>
-  </body>
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 { margin: 15px 0 5px; font-size: 24px; color: #d81b60; }
+    p.subtitle { margin: 0; font-size: 14px; color: #666; }
+
+    /* Sección de Políticas */
+    .policies {
+      background-color: #fff3e0;
+      margin: 20px;
+      padding: 15px;
+      border-radius: 15px;
+      font-size: 13px;
+      border-left: 4px solid #ffb74d;
+    }
+
+    /* Menú de Servicios */
+    h2 { text-align: center; font-size: 18px; margin-top: 30px; }
+    
+    .service-list { padding: 0 20px; }
+    .service-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 15px;
+    }
+    .price { font-weight: bold; color: #d81b60; }
+
+    /* Galería Interactiva */
+    .gallery { padding: 0 20px; }
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+    }
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .card-content { padding: 15px; text-align: center; }
+    .card-title { font-weight: 600; margin-bottom: 10px; font-size: 15px;}
+    
+    /* Botones de WhatsApp */
+    .btn-ws {
+      display: block;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .btn-ws:hover { background-color: #128C7E; }
+
+    /* Marca de agua de tu agencia */
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059e98b?q=80&w=400&auto=format&fit=crop" class="profile-img" alt="Logo">
+      <h1>Glamour Nails</h1>
+      <p class="subtitle">Especialistas en esculpido y diseño</p>
+    </div>
+
+    <div class="policies">
+      <strong>📌 Políticas del Estudio:</strong><br>
+      • Atención con cita previa.<br>
+      • Tolerancia máxima de 15 minutos.<br>
+      • Se requiere anticipo para agendar.
+    </div>
+
+    <h2>Nuestros Servicios</h2>
+    <div class="service-list">
+      <div class="service-item"><span>Manicura Rusa + Esmaltado</span> <span class="price">$15</span></div>
+      <div class="service-item"><span>Set Acrílico Básico</span> <span class="price">$25</span></div>
+      <div class="service-item"><span>Retoque Acrílico</span> <span class="price">$18</span></div>
+    </div>
+
+    <h2>Inspiración y Diseños</h2>
+    <div class="gallery">
+      
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=400&auto=format&fit=crop" alt="Diseño 1">
+        <div class="card-content">
+          <div class="card-title">Acrílico Tonos Nude</div>
+          <a href="https://wa.me/50557872347?text=Hola,%20quiero%20agendar%20una%20cita.%20Me%20gustó%20el%20diseño%20de%20Acrílico%20Tonos%20Nude%20del%20catálogo." class="btn-ws" target="_blank">
+            Agendar este diseño
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=400&auto=format&fit=crop" alt="Diseño 2">
+        <div class="card-content">
+          <div class="card-title">Manicura Francesa Moderna</div>
+          <a href="https://wa.me/50557872347?text=Hola,%20quiero%20agendar%20una%20cita.%20Me%20gustó%20el%20diseño%20Francesa%20Moderna%20del%20catálogo." class="btn-ws" target="_blank">
+            Agendar este diseño
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      Diseñado por <strong>Editable Studio</strong>
+    </div>
+
+  </div>
+
+</body>
 </html>
