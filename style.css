@@ -1,54 +1,179 @@
+/* Paleta de Colores EDITABLE */
 :root {
-    --bg: #000000;
-    --text: #ffffff;
-    --accent: #ffffff;
-    --gray: #1a1a1a;
+  --bg: #000000;
+  --text: #ffffff;
+  --gray-muted: #888888;
+  --accent: #ffffff;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { 
-    background-color: var(--bg); 
-    color: var(--text); 
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Navegación Estilo Agencia */
 nav {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 30px 10%; position: fixed; width: 100%; z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 8%;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
 }
 
-.logo { font-weight: 800; font-size: 1.5rem; }
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
 
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  margin-left: 35px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s opacity;
+}
+
+.nav-links a:hover {
+  opacity: 0.5;
+}
+
+.btn-contact {
+  border: 1px solid white;
+  padding: 10px 25px;
+  border-radius: 100px;
+}
+
+/* Hero Section (Ajuste de Escala) */
 header {
-    height: 100vh; display: flex; align-items: center; justify-content: center;
-    text-align: center; padding: 0 10%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 10%;
 }
 
-h1 { font-size: clamp(3rem, 8vw, 6rem); line-height: 1; font-weight: 800; }
-h1 span { color: transparent; -webkit-text-stroke: 1px white; }
+.main-logo {
+  width: 150px; /* Tamaño controlado, no gigante */
+  height: auto;
+  margin-bottom: 40px;
+  /* Esto evita que se vea borroso o gigante */
+}
 
+h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 0.9;
+  margin-bottom: 20px;
+}
+
+h1 span {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+header p {
+  color: var(--gray-muted);
+  font-size: 1.1rem;
+  max-width: 500px; /* Esto limita el ancho para que se vea elegante */
+  text-align: center; /* Centra el texto por dentro */
+  margin-left: auto; /* Estos dos centran el "bloque" del párrafo */
+  margin-right: auto;
+  margin-top: 20px; /* Un poco de aire respecto al título */
+}
+
+/* El Bento Grid (Donde irán tus trabajos) */
 .bento-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 250px; gap: 20px; padding: 10% 10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 100px 8%;
+  background: #050505;
 }
 
 .bento-item {
-    background: var(--gray); border-radius: 20px; padding: 30px;
-    display: flex; flex-direction: column; justify-content: flex-end;
-    transition: transform 0.3s ease; overflow: hidden;
-    background-size: cover; background-position: center;
+  background: #111;
+  border: 1px solid #222;
+  height: 350px;
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: 0.4s all ease;
 }
 
-.bento-item:hover { transform: scale(1.02); }
-.wide { grid-column: span 2; }
-.tall { grid-row: span 2; }
-
-.btn-download {
-    display: inline-block; padding: 15px 30px; background: white;
-    color: black; text-decoration: none; border-radius: 50px; font-weight: bold;
+.bento-item:hover {
+  border-color: #444;
+  transform: translateY(-10px);
 }
 
-/* Animación de entrada */
-.reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease; }
-.reveal.active { opacity: 1; transform: translateY(0); }
+.bento-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.bento-content p {
+  font-size: 0.9rem;
+  color: var(--gray-muted);
+}
+
+.tag {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #444; /* Un gris oscuro que resalte sutilmente */
+  margin-bottom: 15px;
+  display: block;
+}
+
+.btn-mini {
+  margin-top: 20px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  font-size: 0.8rem;
+  padding-bottom: 5px;
+}
+
+/* Animación de entrada para el Hero */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.footer-note {
+  text-align: center;
+  padding: 100px 10%;
+  color: var(--gray-muted);
+  font-style: italic;
+  font-weight: 300;
+}
